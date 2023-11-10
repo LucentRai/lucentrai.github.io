@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- METADATA -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- FAVICON -->
-	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-	<link rel="manifest" href="../assets/favicon/site.webmanifest">
-	<link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#0066cc">
-	<link rel="shortcut icon" href="../assets/favicon/favicon.ico">
-	<meta name="msapplication-TileColor" content="#0066cc">
-	<meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-
 	<title>base64 encode and decode -- lucent.com.np</title>
-
-	<!-- STYLES -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="../assets/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<style>
-		body {
-			margin-top: 10vh;
-		}
+	<style>
 		h1 {
 			margin-top: 1rem;
 		}
 		.card-panel{
 			margin-bottom: 3rem;
+			overflow: scroll;
 		}
 		form {
 			margin-bottom: 2rem;
 		}
+		#encoded-message-copied,
+		#decoded-message-copied {
+			visibility: hidden;
+		}
 	</style>
 </head>
 <body>
-	<div class="row">
-		<div class="col s8 offset-s2">
-			<div class="card-panel">
-				<form>
-					<label for="decode-message">Message to decode</label>
-					<input type="text" id="decode-message" placeholder="Message">
-					<button id="btn-decode" class="btn">Decode</button>
-				</form>
-				<label for="decoded">Decoded</label>
-				<h1 id="decoded"></h1>
-			</div>
-			<div class="card-panel">
-				<form>
-					<label for="message">Enter a secret message</label>
-					<input id="message" type="text" placeholder="Message">
-					<button id="btn-encode" class="btn">Encode</button>
-				</form>
-
-				<label for="encoded">Encoded</label>
-				<input type="text" id="encoded">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h1>Base64 Encoder/Decoder</h1>
+				<div class="card-panel">
+					<form>
+						<label for="decode-message">Message to decode</label>
+						<input type="text" id="decode-message" placeholder="Message">
+						<button id="btn-decode" class="btn">Decode</button>
+						<button id="btn-copy-decoded" class="btn" style="visibility: hidden;">Copy Decoded</button>
+					</form>
+					<label for="decoded">Decoded<br>"Ctrl + Q" to open link in new tab</label>
+					<span class="badge" id="decoded-message-copied">Copied✅</span>
+					<p class="flow-text" id="decoded"></p>
+				</div>
+				<div class="card-panel">
+					<form>
+						<label for="message">Enter a secret message</label>
+						<input id="message" type="text" placeholder="Message">
+						<button id="btn-encode" class="btn">Encode</button>
+						<button id="btn-copy-encoded" class="btn" style="visibility: hidden;">Copy Encoded</button>
+					</form>
+	
+					<label for="encoded">Encoded<br>"Ctrl + Alt + C" to copy encoded message</label>
+					<span class="badge" id="encoded-message-copied">Copied✅</span>
+					<p class="flow-text" id="encoded"></p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<script src="../js/b64.js"></script>
+	<script src="../bundle.js"></script>
 </body>
 </html>
