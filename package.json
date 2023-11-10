@@ -1,0 +1,22 @@
+{
+  "name": "lucentrai.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucentRai/lucentrai.github.io.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Lucent Rai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucentRai/lucentrai.github.io/issues"
+  },
+  "homepage": "https://github.com/LucentRai/lucentrai.github.io#readme"
+}
