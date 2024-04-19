@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/LucentRai/lucentrai.github.io/issues"
   },
-  "homepage": "https://github.com/LucentRai/lucentrai.github.io#readme"
+  "homepage": "https://github.com/LucentRai/lucentrai.github.io#readme",
+  "dependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
