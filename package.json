@@ -4,7 +4,8 @@
 	"description": "Portfolio Website",
 	"main": "index.html",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack"
 	},
 	"repository": {
 		"type": "git",
@@ -23,6 +24,13 @@
 		"-": "^0.0.1"
 	},
 	"devDependencies": {
+		"copy-webpack-plugin": "^13.0.1",
+		"css-loader": "^7.1.3",
+		"css-minimizer-webpack-plugin": "^7.0.4",
+		"html-loader": "^5.1.0",
+		"html-minimizer-webpack-plugin": "^5.0.4",
+		"html-webpack-plugin": "^5.6.6",
+		"mini-css-extract-plugin": "^2.10.0",
 		"webpack": "^5.104.0",
 		"webpack-cli": "^6.0.1"
 	}
